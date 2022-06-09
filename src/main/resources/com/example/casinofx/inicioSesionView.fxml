@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="335.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casinofx.inicioSesionController">
+   <children>
+      <Label contentDisplay="CENTER" layoutX="18.0" layoutY="27.0" prefHeight="50.0" prefWidth="292.0" style="-fx-alignment: center;" text="Inicio sesión" textFill="WHITE">
+         <font>
+            <Font name="JetBrains Mono Regular" size="36.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nomUsuario" layoutX="94.0" layoutY="101.0" prefHeight="36.0" prefWidth="146.0" promptText="Usuario" style="-fx-background-color: red; -fx-text-fill: white;">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font></TextField>
+      <Button fx:id="btnLogin" layoutX="107.0" layoutY="238.0" mnemonicParsing="false" onAction="#login" prefHeight="26.0" prefWidth="123.0" style="-fx-background-color: red; -fx-text-fill: white;" text="SIGUIENTE" textAlignment="CENTER">
+         <font>
+            <Font name="JetBrains Mono Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="etiquetaError" layoutX="74.0" layoutY="190.0" prefHeight="18.0" prefWidth="182.0" style="-fx-text-fill: red;" />
+      <PasswordField fx:id="contraseña" layoutX="94.0" layoutY="168.0" prefHeight="36.0" prefWidth="146.0" promptText="Contraseña" style="-fx-background-color: red; -fx-text-fill: white;">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font></PasswordField>
+      <Hyperlink fx:id="linkRegistro" layoutX="235.0" layoutY="282.0" onAction="#registrarUsuario" style="-fx-text-fill: white;" text="Regístrate">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font></Hyperlink>
+   </children>
+</AnchorPane>

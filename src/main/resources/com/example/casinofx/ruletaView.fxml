@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="702.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casinofx.ruletaController">
+   <children>
+      <ImageView fitHeight="467.0" fitWidth="702.0" layoutY="-8.0">
+         <image>
+            <Image url="@../../../img/ruleta.jpg" />
+         </image>
+      </ImageView>
+      <TextArea editable="false" prefHeight="105.0" prefWidth="199.0" text="1 -&gt; Número Único(0-36)&#10;2 -&gt; Rojo                                                                 &#10;3 -&gt; Negro                                  &#10;4 -&gt; Par&#10;5 -&gt; Impar&#10;6 -&gt; 1-18                              &#10;7 -&gt; 19-36&#10;8 -&gt; Primera Docena                                  &#10;9 -&gt; Segunda Docena&#10;10 -&gt; Tercera Docena&#10;11 -&gt; Primera Columna&#10;12 -&gt; Segunda Columna&#10;13 -&gt; Tercera Columna">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font></TextArea>
+      <TextField fx:id="apuestaEscogida" alignment="CENTER" layoutX="263.0" layoutY="16.0" prefHeight="31.0" prefWidth="179.0" promptText="Seleccione una apuesta" style="-fx-background-color: black; -fx-text-fill: white;">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="cantidadApostada" alignment="CENTER" layoutX="263.0" layoutY="60.0" prefHeight="31.0" prefWidth="179.0" promptText="Importe (€)" style="-fx-background-color: black; -fx-text-fill: white;">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font></TextField>
+      <Button fx:id="btnJugarRuleta" layoutX="482.0" layoutY="358.0" mnemonicParsing="false" onAction="#jugar" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: black; -fx-text-fill: white;" text="JUGAR">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="mostrarSaldo" editable="false" layoutX="537.0" layoutY="16.0" prefHeight="31.0" prefWidth="110.0" text="Saldo: ">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font></TextField>
+      <Button fx:id="btnInicio" layoutX="116.0" layoutY="358.0" mnemonicParsing="false" onAction="#volverInicio" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: black; -fx-text-fill: white;" text="INICIO">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font></Button>
+      <TextField fx:id="numeroApostado" alignment="CENTER" layoutX="469.0" layoutY="16.0" prefHeight="31.0" prefWidth="50.0" promptText="0-36" style="-fx-background-color: black; -fx-text-fill: white;">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font></TextField>
+      <Button fx:id="actualizacionSaldo" layoutX="650.0" layoutY="19.0" mnemonicParsing="false" onAction="#actualizarSaldo" prefHeight="25.0" prefWidth="50.0" style="-fx-background-color: transparent; -fx-text-fill: white;">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font>
+      </Button>
+      <TextField fx:id="mostrarNumGanador" alignment="CENTER" layoutX="244.0" layoutY="398.0" prefHeight="31.0" prefWidth="219.0" style="-fx-background-color: black; -fx-text-fill: white;" text="NÚMERO GANADOR: ">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

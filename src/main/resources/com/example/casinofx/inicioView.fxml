@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="352.0" prefWidth="491.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casinofx.menuPrincipalController">
+   <children>
+      <AnchorPane layoutY="-1.0" prefHeight="417.0" prefWidth="478.0">
+         <children>
+            <ImageView fx:id="imageViewFondo" fitHeight="435.0" fitWidth="491.0" layoutY="1.0" pickOnBounds="true">
+               <image>
+                  <Image url="@../../../img/fondoPortada.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imageViewLogo" fitHeight="152.0" fitWidth="248.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../img/logoPortada.png" />
+               </image>
+            </ImageView>
+            <Hyperlink fx:id="linkMasInfo" onAction="#generarCsvHistorial" layoutX="347.0" layoutY="368.0" text="HISTORIAL" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono Bold" size="12.0" />
+               </font>
+            </Hyperlink>
+            <TextField fx:id="saldoUsuario" editable="false" layoutX="275.0" layoutY="77.0" onAction="#actualizarSaldo" prefHeight="26.0" prefWidth="144.0" text="Saldo: ">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnDepositar" layoutX="52.0" layoutY="159.0" mnemonicParsing="false" onAction="#navegacionDeposito" prefHeight="52.0" prefWidth="102.0" style="-fx-background-color: #023d79;" text="Depositar" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnRuleta" layoutX="52.0" layoutY="223.0" mnemonicParsing="false" onAction="#navegacionRuleta" prefHeight="52.0" prefWidth="102.0" style="-fx-background-color: #ff313a;" text="Ruleta" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnPorra" layoutX="52.0" layoutY="287.0" mnemonicParsing="false" onAction="#navegacionPorra" prefHeight="52.0" prefWidth="102.0" style="-fx-background-color: #007547;" text="Porra" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExclusion" layoutX="52.0" layoutY="354.0" mnemonicParsing="false" onAction="#navegacionExclusion" prefHeight="52.0" prefWidth="102.0" style="-fx-background-color: black;" text="Exclusión" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="13.0" />
+               </font>
+            </Button>
+            <TextField fx:id="nomUsuario" editable="false" layoutX="275.0" layoutY="36.0" onAction="#consultarSaldo" prefHeight="26.0" prefWidth="144.0" text="Nick: ">
+               <font>
+                  <Font name="JetBrains Mono Regular" size="13.0" />
+               </font>
+            </TextField>
+            <Button fx:id="mostrarNomUsuario" layoutX="425.0" layoutY="37.0" mnemonicParsing="false" onAction="#consultarNick" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: transparent;" text="nom" textFill="TRANSPARENT" />
+            <Button fx:id="mostrarSaldo" layoutX="425.0" layoutY="77.0" mnemonicParsing="false" onAction="#actualizarSaldo" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: transparent;" text="nom" textFill="TRANSPARENT" />
+            <Button fx:id="saldo_consulta" layoutX="424.0" layoutY="77.0" mnemonicParsing="false" onAction="#actualizarSaldo" prefHeight="26.0" prefWidth="53.0" style="-fx-background-color: transparent;" textFill="WHITE">
+               <font>
+                  <Font name="JetBrains Mono ExtraBold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

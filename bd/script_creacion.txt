@@ -1,0 +1,71 @@
+//CREACION BD
+create database casino;
+use casino;
+
+create table Usuario(
+	nomUsuario varchar(100) primary key,
+	contraseña varchar(100),
+	nombre varchar(100),
+	apellidos varchar(100),
+	saldo double,
+	f_autoexclusion datetime
+);
+
+create table TiposApuesta(
+	idApuesta int auto_increment,
+	nomApuesta varchar(100),
+	constraint pk_Apuesta primary key (idApuesta)
+);
+
+create table Ruleta(
+	idApuestaRuleta int auto_increment,
+	importeApostado double,
+	tipoApuesta int,
+	numGanador int,
+	constraint pk_Ruleta primary key (idApuestaRuleta),
+	constraint fk_Ruleta foreign KEY (tipoApuesta) REFERENCES TiposApuesta(idApuesta)
+);
+
+create table Porra(
+	idPorra int auto_increment,
+	bote int,
+	equipoLocal varchar(100),
+	equipoVisitante varchar(100),
+	pronosticoGolesLocales int,
+	pronosticoGolesVisitantes int,
+	golesLocal int,
+	golesVisitante int,
+	constraint pk_Porra primary key (idPorra)
+);
+
+create table UsuarioRuleta(
+	idUsuarioRuleta int auto_increment,
+    	idApuestaRuleta int,
+	nomUsuario varchar(100),
+	constraint pk_UsuarioRuleta primary key (idUsuarioRuleta),
+    	constraint fk_UsuarioRuleta foreign KEY (idApuestaRuleta) REFERENCES Ruleta(idApuestaRuleta),
+	constraint fk2_UsuarioRuleta foreign KEY (nomUsuario) REFERENCES Usuario(nomUsuario)
+);
+
+create table UsuarioPorra(
+	idUsuarioPorra int auto_increment,
+    idPorra int,
+	nomUsuario varchar(100),
+	constraint pk_UsuarioPorra primary key (idUsuarioPorra),
+	constraint fk_UsuarioPorra foreign KEY (idPorra) REFERENCES Porra(idPorra),
+    constraint fk2_UsuarioPorra foreign KEY (nomUsuario) REFERENCES Usuario(nomUsuario)
+);
+
+insert into TiposApuesta(nomApuesta) values ('Número Único');
+insert into TiposApuesta(nomApuesta) values ('Rojo');
+insert into TiposApuesta(nomApuesta) values ('Negro');
+insert into TiposApuesta(nomApuesta) values ('Par');
+insert into TiposApuesta(nomApuesta) values ('Impar');
+insert into TiposApuesta(nomApuesta) values ('1-18');
+insert into TiposApuesta(nomApuesta) values ('19-36');
+insert into TiposApuesta(nomApuesta) values ('Primera Docena');
+insert into TiposApuesta(nomApuesta) values ('Segunda Docena');
+insert into TiposApuesta(nomApuesta) values ('Tercera Docena');
+insert into TiposApuesta(nomApuesta) values ('Primera Columna');
+insert into TiposApuesta(nomApuesta) values ('Segunda Columna');
+insert into TiposApuesta(nomApuesta) values ('Tercera Columna');

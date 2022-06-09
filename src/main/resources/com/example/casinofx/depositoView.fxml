@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="319.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.casinofx.depositoController">
+   <children>
+      <ImageView fx:id="cantidadDepositada" fitHeight="319.0" fitWidth="600.0">
+         <image>
+            <Image url="@../../../img/deposito.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="368.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrese su saldo aquí en euros" wrappingWidth="217.99999868869781">
+         <font>
+            <Font name="JetBrains Mono ExtraBold" size="12.0" />
+         </font></Text>
+      <TextField fx:id="cantidadAIngresar" layoutX="436.0" layoutY="73.0" prefHeight="31.0" prefWidth="73.0" promptText="Cantidad">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font></TextField>
+      <Button fx:id="btnDepositarSaldo" layoutX="406.0" layoutY="263.0" mnemonicParsing="false" onAction="#deposito" prefHeight="31.0" prefWidth="142.0" style="-fx-background-color: #ff7101; -fx-text-fill: white;" text="DEPOSITAR">
+         <font>
+            <Font name="JetBrains Mono Regular" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>
